@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 4</title>
+    <style>
+      * {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        box-sizing: border-box;
+        align-items: center;
+        background: linear-gradient(to right, rgb(2, 48, 81), lightblue);
+      }
+      h1 {
+        font-size: 3.2vw;
+        text-align: center;
+        color: whitesmoke;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      nav {
+        display: flex;
+        width: 15%;
+        text-align: center;
+        justify-content: space-around;
+        font-weight: 600;
+      }
+      .main-div {
+        display: flex;
+        flex-direction: row;
+      }
+      .left-part {
+        background: linear-gradient(to bottom, gray, transparent);
+        height: 100vh;
+        width: 260px;
+        padding: 12px;
+        text-align: left;
+      }
+      .left-part h2 {
+        font-family: cursive;
+        padding-bottom: 2px;
+        font-weight: 900;
+        font-size: 2vw;
+      }
+
+      .left-part p {
+        font-size: 1.6vw;
+        padding: 10px 2px;
+      }
+      .left-part p:hover {
+        cursor: pointer;
+        background: lightslategray;
+      }
+      .under {
+        background: rgb(103, 103, 103);
+        height: 1px;
+      }
+      .main-right {
+        padding: 10px;
+        width: 100%;
+        margin-left: 8px;
+      }
+      .right-h2 {
+        font-family: fantasy;
+        letter-spacing: 1.5px;
+        padding-bottom: 2px;
+        font-weight: 500;
+        font-size: 2.2vw;
+      }
+      .img-pack {
+        display: flex;
+        gap: 20px;
+        padding: 20px 0px 0px 50px;
+        margin-bottom: 8px;
+      }
+      .img-pack img {
+        width: 80%;
+        height: 420px;
+        object-fit: cover;
+      }
+      .para-story{
+        font-size: 1.5vw;
+        margin-bottom: 10px;
+      }
+      .main-right h3 {
+        font-size: 30px;
+        font-weight: 900;
+      }
+      ul{
+        margin: 12px;
+        font-size: 20px;
+        padding-left: 30px;
+      }
+      footer{
+        text-align: center;
+        padding: 5px 0;
+        background: #252525;
+        color: whitesmoke;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Madhuram Coffee</h1>
+      <nav>
+        <a href="Home">Home</a>
+        <a href="">About</a>
+        <a href="">Products</a>
+      </nav>
+    </header>
+    <main>
+      <div class="main-div">
+        <div class="left-part">
+          <h2>Explore More</h2>
+          <p>Our Story</p>
+          <div class="under"></div>
+          <p>Coffee Beans</p>
+          <div class="under"></div>
+          <p>Brewing Guides</p>
+          <div class="under"></div>
+          <p>Visit Us</p>
+        </div>
+        <div class="main-right">
+          <h2 class="right-h2">Welcome to Madhuram Coffee</h2>
+          <div class="img-pack">
+            <img
+              class="images"
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <img
+              class="images"
+              src="https://images.unsplash.com/photo-1580247649749-54644facb57d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <img
+              class="images"
+              src="https://plus.unsplash.com/premium_photo-1675435644687-562e8042b9db?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <p class="para-story">Where Every Sip Tells a Story...</p>
+          <p class="para-story">
+            At <strong>Madhuram Coffee</strong>, we blend tradition with taste
+            to serve you the finest coffee brewed with love. Whether you're
+            starting your morning or taking a break from the hustle, our rich
+            aroma and deep flavor will awaken your senses. Dive into a cup of
+            warmth, calm, and comfort — just the way coffee should be.
+          </p>
+          <h3>⭐ Why Choose Madhuram Coffee?</h3>
+          <ul>
+            <li>100% Pure Arabica Beans</li>
+            <li>Handcrafted with Traditional Roasting Methods</li>
+            <li>Rich Flavor, Smooth Finish</li>
+            <li>Locally Sourced, Globally Admired</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <p><em>“Life begins after coffee — and at Madhuram, it begins beautifully.”</em></p>
+        <p>&copy; All copyrights are reseved | SUDHANSHU GHOSH</p>
+    </footer>
+  </body>
+</html>

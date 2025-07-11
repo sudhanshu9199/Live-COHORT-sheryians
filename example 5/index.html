@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Exercise 5</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      h2 {
+        font-family: "Oswald", sans-serif;
+        font-size: 4vw;
+        font-weight: 900;
+        text-transform: capitalize;
+        text-align: center;
+        color: rgb(203, 123, 10);
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        object-fit: contain;
+        object-position: center;
+      }
+      form {
+        width: 616px;
+        border: 2px solid darkolivegreen;
+        padding: 13px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        background: rgba(220, 220, 220, 0.478);
+        position: relative;
+      }
+      fieldset {
+        margin-bottom: 12px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      legend {
+        font-size: 23px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      button {
+        padding: 12px 20px;
+        font-size: 25px;
+        font-weight: 600;
+        align-items: end;
+        background: green;
+        color: aliceblue;
+        border: none;
+        cursor: pointer;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+      }
+      button:hover {
+        transform: scale(0.9);
+        background: rgb(10, 162, 10);
+        /* transform: translate(500px, 0px); */
+      }
+      input {
+        height: 1.6vw;
+        background: rgb(220, 219, 217);
+        padding: 1px 2px;
+        font-size: 15px;
+        border-radius: 8px;
+      }
+      input:focus {
+        color: rgb(2, 134, 143);
+      }
+      label {
+        font-size: 19px;
+      }
+      .radio {
+        width: 16px;
+      }
+      #coffees,
+      #levels,
+      #milks {
+        font-size: 18px;
+      }
+      textarea {
+        width: 150px;
+        height: 50px;
+        padding: 8px 8px;
+        border-radius: 10px;
+        font-size: 17px;
+      }
+      @keyframes rotate {
+        0% { transform: rotate(0deg);}
+        50% { transform: rotate(180deg);}
+        100% { transform: rotate(360deg);}
+      }
+      .coffee-cup{
+        position: absolute;
+        width: 200px;
+        top: 30%;
+        right: 20%;
+        animation: rotate infinite 2s ease-in-out;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>Coffee Order Form</h2>
+    <form action="">
+        <img src="coffee-cup.png" alt="" class="coffee-cup">
+      <div style="z-index: 2;">
+        <fieldset>
+          <legend>Customer Information</legend>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="phone">Mobile Number</label>
+          <input type="number" id="phone" name="phone" required />
+          <label for="email">Email ID:</label>
+          <input type="email" id="email" name="email" />
+          <input
+            type="radio"
+            id="pickup"
+            name="pickup_delivery"
+            value="pickup"
+            class="radio"
+          />
+          <label for="pickup">Pickup</label>
+          <input
+            type="radio"
+            id="delivery"
+            name="pickup_delivery"
+            value="delivery"
+            class="radio"
+          />
+          <label for="delivery">Delivery</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Coffee Selection</legend>
+          <label for="coffees">Type of Coffee:</label>
+          <select name="coffees" id="coffees">
+            <option value="select">select here</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Latte">Latte</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Cold Brew">Cold Brew</option>
+          </select>
+          <label for="">Size:</label>
+          <input
+            type="radio"
+            name="size"
+            id="small"
+            value="small"
+            class="radio"
+          />
+          <label for="small">Small</label>
+          <input
+            type="radio"
+            name="size"
+            id="medium"
+            value="medium"
+            class="radio"
+          />
+          <label for="medium">Medium</label>
+          <input
+            type="radio"
+            name="size"
+            id="large"
+            value="large"
+            class="radio"
+          />
+          <label for="large">Large</label>
+
+          <label for="">Add-ons:</label>
+          <input
+            type="checkbox"
+            name="Extra-Short"
+            id="Extra-Short"
+            value="extra-short"
+            class="radio"
+          />
+          <label for="Extra-Short">Extra Short</label>
+          <input
+            type="checkbox"
+            name="whipped-cream"
+            id="whipped-cream"
+            value="whipped-cream"
+            class="radio"
+          />
+          <label for="whipped-cream">Whipped Cream</label>
+          <input
+            type="checkbox"
+            name="flavored-syrups"
+            id="flavored-syrups"
+            value="flavored-syrups"
+            class="radio"
+          />
+          <label for="flavored-syrups">Flavored Syrups</label>
+          <input
+            type="checkbox"
+            name="ice"
+            id="ice"
+            value="ice"
+            class="radio"
+          />
+          <label for="ice">Ice</label>
+
+          <label for="">Sugar Level</label>
+          <select name="levels" id="levels">
+            <option value="No Sugar">No Sugar</option>
+            <option value="Less">Less</option>
+            <option value="Medium">Medium</option>
+            <option value="Extra">Extra</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Milk Preference</legend>
+          <select name="milks" id="milks">
+            <option value="Regular Milk">Regular Milk</option>
+            <option value="Skim">Skim</option>
+            <option value="Soy">Soy</option>
+            <option value="Almond">Almond</option>
+            <option value="Oat">Oat</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Quantity</legend>
+          <label for="number">Number input:</label>
+          <input type="Number" max="3" id="number" name="number" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery/Pickup Time</legend>
+          <input type="datetime-local" name="datetime" />
+        </fieldset>
+        <fieldset>
+          <legend>Special Instructions (Optional)</legend>
+          <textarea
+            name="Instructions"
+            id="Instructions"
+            placeholder="Like: No ice, extra hot"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Payment Method</legend>
+          <label for="cash">Cash</label>
+          <input
+            type="radio"
+            id="cash"
+            name="payment"
+            value="cash"
+            class="radio"
+          />
+          <label for="card">Card</label>
+          <input
+            type="radio"
+            id="card"
+            name="payment"
+            value="card"
+            class="radio"
+          />
+          <label for="upi">UPI</label>
+          <input
+            type="radio"
+            id="upi"
+            name="payment"
+            value="upi"
+            class="radio"
+          />
+        </fieldset>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
