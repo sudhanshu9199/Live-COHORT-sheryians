@@ -1,22 +1,23 @@
-let h = document.querySelector('h1');
+let h = document.querySelector("h1");
 // h.innerHTML = 'Ram Ram Sita.';  // changing the innerHTML text
 
-h.style.color = 'purple'; // change the CSS
-h.addEventListener('click', () => { // eventlistner
-    console.log('Hey guyes');
-    h.innerHTML = 'Ram Ram bhaiO'
-})
+h.style.color = "purple"; // change the CSS
+h.addEventListener("click", () => {
+  // eventlistner
+  console.log("Hey guyes");
+  h.innerHTML = "Ram Ram bhaiO";
+});
 
-let box = document.getElementById('box');
-box.style.backgroundColor = 'darkblue';
-box.innerHTML = 'Ram Ram'
-box.addEventListener('dblclick', () => { 
-    box.style.backgroundColor = 'darkgreen';
-box.innerHTML = 'Sita Ram'
-})
+let box = document.getElementById("box");
+box.style.backgroundColor = "darkblue";
+box.innerHTML = "Ram Ram";
+box.addEventListener("dblclick", () => {
+  box.style.backgroundColor = "darkgreen";
+  box.innerHTML = "Sita Ram";
+});
 
-let heads = document.querySelectorAll('h2');
-heads[1].style.backgroundColor = 'red'
+let heads = document.querySelectorAll("h2");
+heads[1].style.backgroundColor = "red";
 
 // let heads = document.querySelectorAll('h2');
 // console.log(heads);  // NodeList
@@ -25,39 +26,58 @@ heads[1].style.backgroundColor = 'red'
 // })
 
 // box.textContent = '<h1>Hello Wolrd</h1>'; // it is read as a text
-box.innerHTML = '<h1>Hello Wolrd</h1>'; // it is read as an Whole html.
+box.innerHTML = "<h1>Hello Wolrd</h1>"; // it is read as an Whole html.
 
 /* ---------------- */
-let box2 = document.querySelector('.box2');
+let box2 = document.querySelector(".box2");
 function changeBox() {
-    console.log('Function run...');
-    box2.innerHTML = 'changed';
-    box2.style.backgroundColor = 'pink';
-    
+  console.log("Function run...");
+  box2.innerHTML = "changed";
+  box2.style.backgroundColor = "pink";
 }
-let button = document.querySelector('button');
-button.addEventListener('click', changeBox )
+let button = document.querySelector("button");
+button.addEventListener("click", changeBox);
 /* ---------------- */
 
-let para = document.querySelector('.day-37-last p');
-let addBtn = document.querySelector('.day-37-last button');
+let para = document.querySelector(".day-37-last p");
+let addBtn = document.querySelector(".day-37-last button");
 
 let check = 0;
-addBtn.addEventListener('click', () => {
-    if (check === 0) {
-        addBtn.textContent = 'Remove';
-    addBtn.style.color = 'red';
-    addBtn.style.backgroundColor = '#b6e36c';
-    para.textContent = 'Friend';
-    para.style.color = 'lightgreen';
+addBtn.addEventListener("click", () => {
+  if (check === 0) {
+    addBtn.textContent = "Remove";
+    addBtn.style.color = "red";
+    addBtn.style.backgroundColor = "#b6e36c";
+    para.textContent = "Friend";
+    para.style.color = "lightgreen";
     check = 1;
-    }
-    else {
-        addBtn.textContent = 'Add Friend';
-    addBtn.style.color = 'white';
-    addBtn.style.backgroundColor = '#5a7920';
-    para.textContent = 'Stranger';
-    para.style.color = 'orange';
+  } else {
+    addBtn.textContent = "Add Friend";
+    addBtn.style.color = "white";
+    addBtn.style.backgroundColor = "#5a7920";
+    para.textContent = "Stranger";
+    para.style.color = "orange";
     check = 0;
-    }
-})
+  }
+});
+
+/** Day 37 Task */
+let bulb = document.querySelector(".day-37-task .bulb");
+let btn = document.querySelector(".day-37-task button");
+
+let isOff = true;
+btn.addEventListener("click", () => {
+  if (isOff) {
+    console.log(isOff, "Ha ON hoya");
+    btn.textContent = "OFF";
+    btn.style.backgroundColor = "#932d01";
+    bulb.style.backgroundColor = "#fff700";
+    isOff = false;
+  } else {
+    console.log(isOff, "Off ho gaya");
+    btn.textContent = "ON";
+    btn.style.backgroundColor = "#019306";
+    bulb.style.backgroundColor = "#ffffff";
+    isOff = true;
+  }
+});
