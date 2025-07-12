@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: #000;
+    color: white;
+}
+
+#box {
+    height: 200px;
+    width: 200px;
+    background: red;
+}
+
+.box2 {
+    height: 200px;
+    width: 200px;
+    background: gray;
+}
+
+.day-37-last{
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.day-37-last button {
+    padding: 1rem 2rem;
+    border: none;
+    background: #5a7920;
+    font-size: 1rem;
+}
